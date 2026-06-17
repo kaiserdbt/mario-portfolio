@@ -3,6 +3,7 @@ import StackMarquee from "@/components/StackMarquee";
 import Services from "@/components/Services";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import AiWorkflow from "@/components/AiWorkflow";
+import Contributions from "@/components/Contributions";
 import AboutMe from "@/components/AboutMe";
 import TechStack from "@/components/TechStack";
 import Marquee from "@/components/Marquee";
@@ -23,6 +24,7 @@ export default function Home() {
       <Reveal>
         <AiWorkflow />
       </Reveal>
+      <Contributions />
       <Reveal>
         <AboutMe />
       </Reveal>
