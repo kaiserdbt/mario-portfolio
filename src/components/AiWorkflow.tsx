@@ -91,12 +91,12 @@ export default function AiWorkflow() {
                 0{index + 1}
               </span>
               <article
-                className={`ml-[60px] rounded-[2px] border border-accent/15 bg-accent/5 p-8 transition-colors duration-300 hover:border-accent/25 hover:bg-accent/[0.08] md:p-10 xl:ml-0 xl:p-12 ${
+                className={`ml-[60px] rounded-xs border border-accent/15 bg-accent/5 p-8 transition-colors duration-300 hover:border-accent/25 hover:bg-accent/[0.08] md:p-10 xl:ml-0 xl:p-12 ${
                   onRight ? "xl:col-start-2" : "xl:col-start-1 xl:row-start-1"
                 }`}
               >
                 <div className="flex flex-wrap items-start gap-x-4 gap-y-3">
-                  <span className="order-1 shrink-0 rounded-[2px] border border-accent/25 bg-accent/10 px-2.5 py-1.5 font-heading text-[11px] uppercase tracking-[0.1em] text-accent/70 xl:order-2 xl:mt-0.5 xl:text-[12px]">
+                  <span className="order-1 shrink-0 rounded-xs border border-accent/25 bg-accent/10 px-2.5 py-1.5 font-heading text-[11px] uppercase tracking-widest text-accent/70 xl:order-2 xl:mt-0.5 xl:text-[12px]">
                     {step.phase}
                   </span>
                   <h3 className="order-2 w-full font-display text-[20px] font-light leading-[1.3] tracking-[0.5px] text-accent xl:order-1 xl:w-auto xl:flex-1 xl:text-[24px]">

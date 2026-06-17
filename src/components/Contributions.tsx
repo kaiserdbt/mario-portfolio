@@ -71,7 +71,7 @@ export default function Contributions() {
                 key={item.title}
                 delay={rowIndex * 130 + columnIndex * 70}
               >
-                <article className="rounded-[2px] border border-accent/15 bg-accent/5 p-8 transition-colors duration-300 hover:border-accent/25 hover:bg-accent/[0.08] md:p-10 xl:p-12">
+                <article className="rounded-xs border border-accent/15 bg-accent/5 p-8 transition-colors duration-300 hover:border-accent/25 hover:bg-accent/[0.08] md:p-10 xl:p-12">
                   <p className="font-heading text-[12px] uppercase tracking-[0.2em] text-accent/55">
                     {item.kicker}
                   </p>

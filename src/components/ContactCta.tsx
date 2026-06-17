@@ -21,7 +21,7 @@ export default function ContactCta() {
         </p>
         <a
           href={`mailto:${profile.email}`}
-          className="mt-10 inline-block rounded-[2px] bg-accent px-8 py-4 text-[18px] font-medium text-background transition-opacity hover:opacity-90"
+          className="mt-10 inline-block rounded-xs bg-accent px-8 py-4 text-[18px] font-medium text-background transition-opacity hover:opacity-90"
         >
           {profile.email}
         </a>

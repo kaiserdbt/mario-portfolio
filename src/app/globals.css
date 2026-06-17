@@ -59,7 +59,7 @@ html {
 
 /* que las anclas no queden tapadas por la cabecera fija */
 section[id] {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: 6.5rem;
 }
 
 body {

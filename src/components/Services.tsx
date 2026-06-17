@@ -28,7 +28,7 @@ export default function Services() {
       <div className="grid grid-cols-1 gap-4 xl:grid-cols-3 xl:gap-8">
         {services.map((s, i) => (
           <Reveal key={s.title} delay={i * 90}>
-            <article className="flex h-full flex-col rounded-[2px] border border-accent/15 bg-accent/5 p-8 md:p-10 xl:p-12">
+            <article className="flex h-full flex-col rounded-xs border border-accent/15 bg-accent/5 p-8 md:p-10 xl:p-12">
               <span className="font-heading text-[13px] uppercase tracking-[0.12em] text-accent/60">
                 0{i + 1}
               </span>

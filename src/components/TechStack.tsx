@@ -13,7 +13,7 @@ export default function TechStack() {
         {stack.map((category) => (
           <div
             key={category.title}
-            className="flex flex-col gap-4 rounded-[2px] border border-accent/15 bg-accent/5 p-7 transition-colors duration-300 hover:border-accent/25 md:flex-row md:items-center md:gap-10 md:p-8"
+            className="flex flex-col gap-4 rounded-xs border border-accent/15 bg-accent/5 p-7 transition-colors duration-300 hover:border-accent/25 md:flex-row md:items-center md:gap-10 md:p-8"
           >
             <h3 className="font-heading text-[13px] uppercase tracking-[0.2em] text-accent md:w-44 md:shrink-0">
               {category.title}
@@ -22,7 +22,7 @@ export default function TechStack() {
               {category.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded-[2px] bg-accent/10 px-3 py-1.5 font-soft text-[13px] leading-none text-accent xl:px-4 xl:py-2 xl:text-[17px]"
+                  className="rounded-xs bg-accent/10 px-3 py-1.5 font-soft text-[13px] leading-none text-accent xl:px-4 xl:py-2 xl:text-[17px]"
                 >
                   {item}
                 </li>

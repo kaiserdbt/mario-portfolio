@@ -83,6 +83,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           alt={`Captura del producto ${project.title}`}
           width={1200}
           height={750}
+          sizes="(max-width: 1440px) 92vw, 1336px"
           className="w-full object-cover"
           priority
         />

@@ -38,7 +38,7 @@ function Badge() {
 function Label({ name, category }: { name: string; category: string }) {
   return (
     <div
-      className="absolute inset-x-6 bottom-6 z-20 flex items-center justify-between rounded-[2px] border border-accent/15 bg-accent/5 px-4 py-3"
+      className="absolute inset-x-6 bottom-6 z-20 flex items-center justify-between rounded-xs border border-accent/15 bg-accent/5 px-4 py-3"
       style={{ backdropFilter: "blur(15px)", WebkitBackdropFilter: "blur(15px)" }}
     >
       <span className="font-display text-2xl font-light leading-none text-accent">
@@ -63,7 +63,7 @@ export default function FeaturedProjects() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Reveal>
             <Link href="/projects/marai-agenda" className="group relative block">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[2px]">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xs">
                 <Img src="/work/marai.webp" alt="Marai Agenda" />
                 <Badge />
               </div>
@@ -72,7 +72,7 @@ export default function FeaturedProjects() {
           </Reveal>
           <Reveal delay={90}>
             <Link href="/projects/olunae" className="group relative block">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[2px]">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-xs">
                 <Img src="/work/olunae.webp" alt="Olunae" />
                 <Badge />
               </div>
@@ -84,7 +84,7 @@ export default function FeaturedProjects() {
         {/* fila 2: Qoniar full-width, dos imagenes fusionadas (sin separacion) */}
         <Reveal delay={120}>
           <Link href="/projects/qoniar" className="group relative block">
-            <div className="relative overflow-hidden rounded-[2px]">
+            <div className="relative overflow-hidden rounded-xs">
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Img src="/work/qoniar-left.webp" alt="Qoniar" />
