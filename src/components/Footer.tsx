@@ -1,30 +1,42 @@
 import Link from "next/link";
 import { profile } from "@/data/profile";
 
-const columns = [
-  {
-    title: "Navegación",
-    links: [
-      { label: "Proyectos", href: "/#work" },
-      { label: "Proceso", href: "/#process" },
-      { label: "Sobre mí", href: "/#about" },
-      { label: "Contacto", href: "/#contact" },
-    ],
-  },
-  {
-    title: "Proyectos",
-    links: [
-      { label: "Marai Agenda", href: "/projects/marai-agenda" },
-      { label: "Olunae", href: "/projects/olunae" },
-      { label: "Qoniar", href: "/projects/qoniar" },
-    ],
-  },
+const navLinks = [
+  { label: "Servicios", href: "/services" },
+  { label: "Proyectos", href: "/#work" },
+  { label: "Sobre mí", href: "/#about" },
+  { label: "Contacto", href: "/#contact" },
 ];
 
 const socials = [
-  { label: "GitHub", href: profile.githubUrl },
-  { label: "LinkedIn", href: profile.linkedinUrl },
-  { label: "Correo", href: `mailto:${profile.email}` },
+  {
+    label: "GitHub",
+    href: profile.githubUrl,
+    icon: (
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+    ),
+  },
+  {
+    label: "LinkedIn",
+    href: profile.linkedinUrl,
+    icon: (
+      <>
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </>
+    ),
+  },
+  {
+    label: "Correo",
+    href: `mailto:${profile.email}`,
+    icon: (
+      <>
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+      </>
+    ),
+  },
 ];
 
 export default function Footer() {
@@ -32,71 +44,65 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto grid w-full max-w-[1400px] grid-cols-2 gap-10 px-6 py-16 sm:px-8 md:grid-cols-4">
-        <div className="col-span-2 md:col-span-1">
-          <Link href="/" className="font-mono text-sm font-semibold tracking-tight">
-            mariocava<span className="text-accent">.</span>
+      <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center gap-9 px-6 py-20 text-center sm:px-8">
+        <div className="flex flex-col items-center gap-3">
+          <Link
+            href="/"
+            className="font-display text-[28px] font-light tracking-tight text-accent"
+          >
+            mariocava<span className="text-accent-2">.</span>
           </Link>
-          <p className="mt-3 max-w-xs text-sm text-muted">{profile.role}</p>
+          <p className="font-soft text-[18px] text-muted">
+            Ingeniero de software full-stack
+          </p>
         </div>
 
-        {columns.map((col) => (
-          <nav key={col.title}>
-            <h3 className="font-heading text-xs font-light uppercase tracking-[0.18em] text-muted">
-              {col.title}
-            </h3>
-            <ul className="mt-4 space-y-2.5">
-              {col.links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-accent"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        ))}
-
-        <nav>
-          <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-muted">
-            Redes
-          </h3>
-          <ul className="mt-4 space-y-2.5">
-            {socials.map((social) => (
-              <li key={social.label}>
-                <a
-                  href={social.href}
-                  className="text-sm text-foreground/80 transition-colors hover:text-accent"
-                  target={social.href.startsWith("http") ? "_blank" : undefined}
-                  rel={
-                    social.href.startsWith("http")
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                >
-                  {social.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-heading text-[14px] uppercase tracking-[0.14em] text-accent/80 transition-colors hover:text-accent"
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
+
+        <div className="flex items-center justify-center gap-3">
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              aria-label={social.label}
+              target={social.href.startsWith("http") ? "_blank" : undefined}
+              rel={
+                social.href.startsWith("http") ? "noopener noreferrer" : undefined
+              }
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-accent/25 text-accent/70 transition-colors duration-300 hover:border-accent/60 hover:text-accent"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                {social.icon}
+              </svg>
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-6 py-6 sm:px-8">
-          <p className="text-xs text-muted">
-            © {year} {profile.name}
-          </p>
-          <a
-            href="#"
-            className="font-mono text-xs uppercase tracking-[0.18em] text-muted transition-colors hover:text-foreground"
-          >
-            Subir ↑
-          </a>
-        </div>
+        <p className="mx-auto w-full max-w-[1400px] px-6 py-6 text-center font-soft text-[13px] text-muted sm:px-8">
+          © {year} {profile.name}
+        </p>
       </div>
     </footer>
   );

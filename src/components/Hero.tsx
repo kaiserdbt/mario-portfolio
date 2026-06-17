@@ -13,8 +13,8 @@ export default function Hero() {
 
       {/* el titular sube a la zona inferior ya transparente del retrato (sin tapar la cara) */}
       <h1 className="relative z-10 mx-auto -mt-4 font-display text-[clamp(2.5rem,6.5vw,5rem)] font-light leading-[1.05] tracking-tight text-balance text-accent sm:-mt-12">
-        Desarrollador <span className="whitespace-nowrap">full-stack</span>
-        <span className="mt-1 block italic">AI-native</span>
+        Ingeniero <span className="whitespace-nowrap">de software</span>
+        <span className="mt-1 block italic">full-stack</span>
       </h1>
 
       <p className="mx-auto mt-5 max-w-2xl font-soft text-xl leading-relaxed text-muted sm:text-[22px]">
