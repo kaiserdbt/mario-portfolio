@@ -40,12 +40,8 @@ export default function StackMarquee() {
 
   return (
     <section className="pb-14 pt-8 sm:pb-16 sm:pt-10">
-      <p className="text-center font-heading text-[13px] uppercase tracking-[0.12em] text-accent/70">
-        El stack con el que diseño y sostengo sistemas en producción
-      </p>
-
       <div
-        className="group relative mx-auto mt-36 max-w-[1400px] overflow-hidden px-6 sm:px-8"
+        className="group relative mx-auto max-w-[1400px] overflow-hidden px-6 sm:px-8"
         style={{ WebkitMaskImage: edgeMask, maskImage: edgeMask }}
       >
         <ul className="flex w-max animate-marquee items-center gap-14 [animation-duration:55s] group-hover:[animation-play-state:paused] sm:gap-20">

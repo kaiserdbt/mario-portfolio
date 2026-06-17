@@ -6,7 +6,6 @@ import AiWorkflow from "@/components/AiWorkflow";
 import Contributions from "@/components/Contributions";
 import AboutMe from "@/components/AboutMe";
 import TechStack from "@/components/TechStack";
-import Marquee from "@/components/Marquee";
 import ContactCta from "@/components/ContactCta";
 import Reveal from "@/components/Reveal";
 
@@ -30,9 +29,6 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <TechStack />
-      </Reveal>
-      <Reveal>
-        <Marquee />
       </Reveal>
       <Reveal>
         <ContactCta />
