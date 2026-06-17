@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollTop from "@/components/ScrollTop";
 import { defaultMetadata } from "@/lib/seo";
 
 const geistMono = Geist_Mono({
@@ -45,12 +46,14 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      data-scroll-behavior="smooth"
       className={`${display.variable} ${satoshi.variable} ${chillax.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ScrollTop />
       </body>
     </html>
   );
