@@ -1,6 +1,6 @@
 # Portfolio · Mario Cava Avila
 
-Portfolio personal de **Mario Cava Avila**, desarrollador full-stack AI-native. Diseño y construyo productos de principio a fin: SaaS B2B multi-tenant, plataformas de SEO programático e integraciones de IA, de la base de datos al despliegue.
+Portfolio personal de **Mario Cava Avila**, ingeniero de software full-stack. Diseño y construyo productos de principio a fin: SaaS B2B multi-tenant, plataformas de SEO programático e integraciones de IA, de la base de datos al despliegue.
 
 **En vivo:** https://mario-portfolio.vercel.app
 

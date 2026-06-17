@@ -9,16 +9,16 @@ export default function TechStack() {
       title="Las herramientas que uso"
       description="Las tecnologías con las que construyo y mantengo software día a día."
     >
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4">
+      <div className="mx-auto flex max-w-[1040px] flex-col gap-4">
         {stack.map((category) => (
           <div
             key={category.title}
-            className="rounded-[2px] border border-accent/15 bg-accent/5 p-8 transition-colors duration-300 hover:border-accent/25 md:p-7"
+            className="flex flex-col gap-4 rounded-[2px] border border-accent/15 bg-accent/5 p-7 transition-colors duration-300 hover:border-accent/25 md:flex-row md:items-center md:gap-10 md:p-8"
           >
-            <h3 className="font-heading text-[12px] uppercase tracking-[0.2em] text-accent">
+            <h3 className="font-heading text-[13px] uppercase tracking-[0.2em] text-accent md:w-44 md:shrink-0">
               {category.title}
             </h3>
-            <ul className="mt-6 flex flex-wrap gap-2">
+            <ul className="flex flex-wrap gap-2.5">
               {category.items.map((item) => (
                 <li
                   key={item}
