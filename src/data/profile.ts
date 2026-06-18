@@ -10,6 +10,7 @@ export type Profile = {
   githubUrl: string;
   linkedinUrl: string;
   portfolioUrl: string;
+  cvUrl: string;
   available: boolean;
 };
 
@@ -25,5 +26,6 @@ export const profile: Profile = {
   githubUrl: "https://github.com/kaiserdbt",
   linkedinUrl: "https://www.linkedin.com/in/mariocavaavila/",
   portfolioUrl: "https://mario-portfolio.vercel.app",
+  cvUrl: "/cv-mario-cava-avila.pdf",
   available: true,
 };

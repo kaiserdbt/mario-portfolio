@@ -49,8 +49,8 @@ export const projects: Project[] = [
     ],
     metrics: [
       { label: "Líneas de código", value: "~553K" },
-      { label: "Tests", value: "432 archivos" },
-      { label: "Modelo de datos", value: "90 tablas con RLS" },
+      { label: "Tests", value: "~4.800 casos" },
+      { label: "Modelo de datos", value: "90 tablas, RLS en todas" },
       { label: "Idiomas", value: "33" },
     ],
     links: [{ label: "Ver en vivo", href: "https://maraiagenda.com" }],
@@ -78,7 +78,8 @@ export const projects: Project[] = [
     metrics: [
       { label: "Líneas de código", value: "~80K" },
       { label: "Tests", value: "54 suites" },
-      { label: "Auditorías en CI", value: "~50" },
+      { label: "Auditorías en CI", value: "48" },
+      { label: "Capas de defensa IA", value: "15" },
       { label: "IA-Likeness del corpus", value: "2,57/10" },
     ],
     links: [{ label: "Ver en vivo", href: "https://olunae.com" }],
@@ -104,7 +105,7 @@ export const projects: Project[] = [
     featured: true,
     stack: ["Next.js 16", "React 19", "Drizzle", "Neon", "Gemini", "Vercel"],
     metrics: [
-      { label: "Casos de test", value: "~1.288" },
+      { label: "Casos de test", value: "1.297" },
       { label: "Validadores de contenido", value: "41" },
       { label: "Páginas modeladas", value: "66" },
       { label: "Tipos de página", value: "5" },
