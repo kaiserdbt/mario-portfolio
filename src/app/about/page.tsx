@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { profile } from "@/data/profile";
+import { stack } from "@/data/stack";
+import { getProject, type ProjectMetric } from "@/data/projects";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -11,9 +13,10 @@ export const metadata = buildMetadata({
 
 const details = [
   { label: "Ubicación", value: profile.location },
+  { label: "Experiencia", value: "Desarrollo web desde 2023" },
   { label: "Disponibilidad", value: "Incorporación inmediata" },
   { label: "Modalidad", value: "Remoto · híbrido · asíncrono" },
-  { label: "Idiomas", value: "Español, catalán e inglés" },
+  { label: "Idiomas", value: "Español y catalán nativos, inglés técnico (B1)" },
 ];
 
 const contact = [
@@ -34,10 +37,61 @@ const competencias = [
   { title: "Aprendizaje rápido", body: "Me pongo al día rápido en herramientas nuevas, dominios que no conozco y formas de trabajar distintas." },
 ];
 
+// las cifras viven en projects.ts; aquí solo elijo qué dos enseñar por slug
+function milestoneStats(slug: string, labels: string[]): ProjectMetric[] {
+  const project = getProject(slug);
+  if (!project) return [];
+  return labels
+    .map((label) => project.metrics.find((m) => m.label === label))
+    .filter((m): m is ProjectMetric => Boolean(m))
+    .slice(0, 2);
+}
+
 const milestones = [
-  { name: "Qoniar: sistema editorial tecnológico con arquitectura comercial, tracking, SEO/GEO y 41 validadores de calidad", year: "2026" },
-  { name: "Olunae: plataforma de SEO programático con clasificación, control editorial e indexabilidad", year: "2026" },
-  { name: "Marai Agenda: SaaS B2B multi-tenant con reservas, pagos y aislamiento de datos", year: "2025" },
+  {
+    name: "Qoniar",
+    kind: "Producto propio",
+    summary:
+      "Sistema editorial tecnológico con arquitectura comercial, tracking y SEO/GEO, sostenido por 41 validadores de calidad.",
+    tags: ["Editorial tech", "SEO/GEO", "Tracking", "41 validadores"],
+    href: "https://qoniar.com/",
+    slug: "qoniar",
+    metricLabels: ["Casos de test", "Páginas modeladas"],
+    year: "2026",
+  },
+  {
+    name: "Olunae",
+    kind: "Producto propio",
+    summary:
+      "Plataforma de SEO programático con clasificación, control editorial e indexabilidad.",
+    tags: ["SEO programático", "Clasificación", "Indexabilidad"],
+    href: "https://olunae.com/",
+    slug: "olunae",
+    metricLabels: ["Tests", "Capas de defensa IA"],
+    year: "2026",
+  },
+  {
+    name: "Marai Agenda",
+    kind: "Producto propio",
+    summary:
+      "SaaS B2B multi-tenant con reservas, pagos y aislamiento de datos por cliente.",
+    tags: ["SaaS B2B", "Multi-tenant", "Pagos", "Aislamiento de datos"],
+    href: "https://maraiagenda.com/es",
+    slug: "marai-agenda",
+    metricLabels: ["Idiomas", "Modelo de datos"],
+    year: "2025",
+  },
+  {
+    name: "Frontend y landings a medida",
+    kind: "Freelance · clientes y empresas",
+    summary:
+      "Páginas frontend y landings para empresas y clientes, desarrolladas de forma autónoma, del encargo a la entrega.",
+    tags: ["Frontend", "Landings", "Diseño web"],
+    href: "",
+    slug: "",
+    metricLabels: [],
+    year: "2023-2025",
+  },
 ];
 
 export default function AboutPage() {
@@ -75,29 +129,59 @@ export default function AboutPage() {
               <p className="mx-auto mt-6 max-w-md font-soft text-[18px] leading-[1.5] text-accent/60 min-[810px]:text-[22px] min-[810px]:leading-[33px] min-[1480px]:mx-0">
                 Ingeniero de software full-stack.
               </p>
-              <a
-                href="#sobre-mi"
-                aria-label="Ir a sobre mí"
-                className="group mt-8 inline-flex items-center gap-4"
-              >
-                <span className="font-heading text-[13px] uppercase tracking-[0.115em] text-accent">
-                  Sobre mí
-                </span>
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-accent transition-transform duration-300 group-hover:translate-y-0.5"
-                  aria-hidden
+              <p className="mx-auto mt-3 max-w-md font-soft text-[15px] leading-[1.5] text-accent/45 min-[810px]:text-[16px] min-[1480px]:mx-0">
+                Desde 2023, del frontend a sistemas en producción.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4 min-[1480px]:justify-start">
+                <a
+                  href={profile.cvUrl}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 rounded-xs bg-accent px-6 py-3.5 font-heading text-[13px] uppercase tracking-[0.115em] text-background transition-colors duration-300 hover:bg-accent-2"
                 >
-                  <path d="M12 5v14M5 12l7 7 7-7" />
-                </svg>
-              </a>
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <path d="M7 10l5 5 5-5" />
+                    <path d="M12 15V3" />
+                  </svg>
+                  Descargar CV
+                </a>
+
+                <a
+                  href="#sobre-mi"
+                  aria-label="Ir a sobre mí"
+                  className="group inline-flex items-center gap-3 font-heading text-[13px] uppercase tracking-[0.115em] text-accent"
+                >
+                  Sobre mí
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent/30 transition-colors duration-300 group-hover:border-accent/60 group-hover:bg-accent/10">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-accent transition-transform duration-300 group-hover:translate-y-0.5"
+                      aria-hidden
+                    >
+                      <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
             </div>
 
             <div id="sobre-mi" className="mt-16 scroll-mt-28">
@@ -217,22 +301,117 @@ export default function AboutPage() {
 
             <div className="mt-12">
               <p className="font-heading text-[13px] uppercase tracking-[0.115em] text-accent">
+                Stack técnico
+              </p>
+              <div className="mt-6 flex flex-col">
+                {stack.map((category) => (
+                  <div
+                    key={category.title}
+                    className="flex flex-col gap-3 border-t border-border py-4 first:border-t-0 sm:flex-row sm:gap-8"
+                  >
+                    <h3 className="font-heading text-[12px] uppercase tracking-[0.2em] text-accent/70 sm:w-40 sm:shrink-0 sm:pt-1.5">
+                      {category.title}
+                    </h3>
+                    <ul className="flex flex-wrap gap-2">
+                      {category.items.map((item) => (
+                        <li
+                          key={item}
+                          className="rounded-xs bg-accent/10 px-3 py-1.5 font-soft text-[13px] leading-none text-accent"
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-12">
+              <p className="font-heading text-[13px] uppercase tracking-[0.115em] text-accent">
                 Hitos destacados
               </p>
               <ul className="mt-4">
-                {milestones.map((item, i) => (
-                  <li
-                    key={`${item.name}-${i}`}
-                    className="flex items-center justify-between gap-6 border-t border-border py-4 first:border-t-0"
-                  >
-                    <span className="font-display text-[20px] font-light leading-[1.2] text-accent">
-                      {item.name}
-                    </span>
-                    <span className="font-heading text-[13px] tracking-[0.115em] text-accent/60">
-                      {item.year}
-                    </span>
-                  </li>
-                ))}
+                {milestones.map((item, i) => {
+                  const stats = milestoneStats(item.slug, item.metricLabels);
+                  const hasStats = stats.length > 0;
+                  return (
+                    <li
+                      key={`${item.name}-${i}`}
+                      className="grid gap-x-8 gap-y-2 border-t border-border py-6 first:border-t-0 sm:grid-cols-[1fr_auto]"
+                    >
+                      <div>
+                        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                          <h3 className="font-display text-[22px] font-light leading-tight text-accent">
+                            {item.name}
+                          </h3>
+                          <span className="font-heading text-[12px] uppercase tracking-[0.115em] text-accent/55">
+                            {item.kind}
+                          </span>
+                        </div>
+                        <p className="mt-2 max-w-xl font-soft text-[17px] leading-[1.6] text-accent/80">
+                          {item.summary}
+                        </p>
+                        <ul className="mt-3 flex flex-wrap gap-2">
+                          {item.tags.map((tag) => (
+                            <li
+                              key={tag}
+                              className="rounded-xs border border-accent/15 bg-accent/5 px-2.5 py-1 font-heading text-[11px] uppercase tracking-[0.08em] text-accent"
+                            >
+                              {tag}
+                            </li>
+                          ))}
+                        </ul>
+                        {hasStats && (
+                          <div className="mt-3.5 flex flex-wrap items-baseline gap-x-5 gap-y-1.5">
+                            {stats.map((m) => (
+                              <span
+                                key={m.label}
+                                className="inline-flex items-baseline gap-1.5"
+                              >
+                                <span className="font-soft text-[15px] leading-none text-accent">
+                                  {m.value}
+                                </span>
+                                <span className="font-heading text-[11px] uppercase tracking-[0.08em] text-accent/50">
+                                  {m.label}
+                                </span>
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        {item.href && (
+                          <a
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group mt-4 inline-flex items-center gap-2.5 font-heading text-[13px] uppercase tracking-[0.115em] text-accent transition-colors hover:text-accent-2"
+                          >
+                            Ver en vivo
+                            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-accent/30 transition-colors duration-300 group-hover:border-accent/60 group-hover:bg-accent/10">
+                              <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                                aria-hidden
+                              >
+                                <path d="M7 17 17 7M7 7h10v10" />
+                              </svg>
+                            </span>
+                          </a>
+                        )}
+                      </div>
+                      <span className="font-heading text-[13px] tracking-[0.115em] text-accent sm:pt-1 sm:text-right">
+                        {item.year}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

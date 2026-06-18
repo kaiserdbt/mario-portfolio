@@ -6,7 +6,7 @@ import { profile } from "@/data/profile";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Servicios",
+  title: "Capacidades",
   description:
     "Webs, SaaS y automatización: productos digitales rápidos y mantenibles, listos para convertir, operar y evolucionar.",
   path: "/services",
@@ -16,7 +16,7 @@ const blocks = [
   {
     id: "webs",
     heading: "Webs y landings de alto rendimiento",
-    lead: "A medida para negocios que no se conforman con verse bien: cada página pensada para convertir las visitas en oportunidades reales.",
+    lead: "Construyo webs y landings pensadas para convertir, no solo para verse bien: cada sección cumple una función, con estructura, jerarquía y mensaje claros.",
     image: "/services/webs-hd.webp",
     width: 2000,
     height: 1500,
@@ -39,7 +39,7 @@ const blocks = [
   {
     id: "saas",
     heading: "SaaS a medida para operar, cobrar y escalar",
-    lead: "Diseño y desarrollo el producto SaaS de principio a fin: modelo de datos, API, pagos, paneles y automatización. Una plataforma que aísla a cada cliente, sostiene cobros y operación, y crece en clientes, sedes o módulos a medida que el negocio lo necesita.",
+    lead: "Diseño y desarrollo el producto SaaS entero: modelo de datos, API, pagos, paneles y automatización. Una plataforma multi-tenant que aísla cada cuenta, sostiene cobros y operación, y escala en clientes, sedes o módulos sin rehacer la arquitectura.",
     image: "/services/saas-vertical.webp",
     width: 1500,
     height: 2000,
@@ -67,14 +67,14 @@ const blocks = [
       },
       {
         label: "Confianza, seguridad y cumplimiento",
-        body: "Un SaaS gestiona datos sensibles, pagos y operaciones, así que la seguridad forma parte del diseño desde el principio: permisos, validaciones, trazabilidad y recuperación ante errores. El producto se apoya en 432 archivos de pruebas y un CI/CD que analiza seguridad en cada cambio (Trivy, Gitleaks) y pasa una revisión de código por IA antes de fusionar.",
+        body: "Un SaaS gestiona datos sensibles, pagos y operaciones, así que la seguridad forma parte del diseño desde el principio: permisos, validaciones, trazabilidad y recuperación ante errores. El producto se apoya en más de 4.800 pruebas y un CI/CD que analiza seguridad en cada cambio (Trivy, Gitleaks) y pasa una revisión de código por IA antes de fusionar.",
       },
     ],
   },
   {
     id: "automatizacion",
     heading: "Automatización operativa para reducir trabajo manual",
-    lead: "Diseño flujos que conectan herramientas, ordenan procesos y eliminan tareas repetitivas sin perder el control. No se trata de automatizar por automatizar: busco sistemas fiables que ahorren tiempo, reduzcan errores y dejen al equipo concentrarse en las decisiones que importan.",
+    lead: "Diseño flujos que conectan herramientas, ordenan procesos y eliminan tareas repetitivas sin perder el control. No se trata de automatizar por automatizar: construyo sistemas fiables que ahorran tiempo, reducen errores y liberan al equipo para las decisiones que importan.",
     image: "/services/automatizacion.webp",
     width: 2000,
     height: 1500,
@@ -82,7 +82,7 @@ const blocks = [
     features: [
       {
         label: "Flujos a medida",
-        body: "Analizo cómo trabaja tu negocio y convierto los procesos manuales en flujos claros, medibles y mantenibles. Automatizo sincronización de datos, avisos internos, generación de informes, seguimiento de clientes, clasificación de solicitudes, actualizaciones de CRM y tareas recurrentes que hoy dependen de copiar, pegar y revisar a mano.",
+        body: "Analizo cómo funciona la operación y convierto los procesos manuales en flujos claros, medibles y mantenibles. Automatizo sincronización de datos, avisos internos, generación de informes, seguimiento de clientes, clasificación de solicitudes, actualizaciones de CRM y tareas recurrentes que hoy dependen de copiar, pegar y revisar a mano.",
       },
       {
         label: "Control y supervisión",
@@ -90,7 +90,7 @@ const blocks = [
       },
       {
         label: "Integraciones entre sistemas",
-        body: "Conecto APIs, webhooks, bases de datos, formularios, CRMs, calendarios, herramientas de comunicación y tareas programadas para que la información fluya sin intervención manual. La prioridad es que tus sistemas trabajen juntos, mantengan datos consistentes y reduzcan la fricción operativa del día a día.",
+        body: "Conecto APIs, webhooks, bases de datos, formularios, CRMs, calendarios, herramientas de comunicación y tareas programadas para que la información fluya sin intervención manual. La prioridad es que los sistemas trabajen juntos, mantengan datos consistentes y reduzcan la fricción operativa del día a día.",
       },
     ],
   },
@@ -104,9 +104,8 @@ export default function ServicesPage() {
           Webs, SaaS <span className="italic">&amp; automatización</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl font-soft text-[18px] leading-[27px] text-accent min-[810px]:text-[22px] min-[810px]:leading-[33px] min-[1600px]:text-[24px] min-[1600px]:leading-[36px]">
-          Productos digitales para negocios que necesitan algo más que presencia
-          en línea: sistemas rápidos y mantenibles, listos para convertir,
-          operar y evolucionar.
+          Construyo productos digitales completos: sistemas rápidos, seguros y
+          mantenibles, listos para convertir, operar y evolucionar.
         </p>
         <div className="mt-9 flex justify-center">
           <Link
@@ -203,22 +202,40 @@ export default function ServicesPage() {
 
       <section id="contact" className="mx-auto w-full max-w-[1400px] px-6 py-32 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="font-heading text-[16px] uppercase tracking-[0.18em] text-accent">
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-accent/20 bg-accent/5 px-4 py-2 font-heading text-[13px] uppercase tracking-[0.18em] text-accent">
+            <span
+              aria-hidden
+              className="h-1.5 w-1.5 rounded-full bg-accent-2 animate-pulse-dot"
+            />
             Disponible
-          </p>
-          <h2 className="mt-5 font-display text-[40px] font-light leading-[1.1] text-accent sm:text-[64px]">
-            ¿Tienes un proyecto entre manos?{" "}
-            <span className="italic">Hablémoslo.</span>
+          </span>
+          <h2 className="mt-7 font-display text-[40px] font-light leading-[1.1] text-accent sm:text-[64px]">
+            Esto es lo que construyo.{" "}
+            <span className="italic">¿Lo queréis en vuestro equipo?</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl font-soft text-[18px] leading-relaxed text-accent">
-            Cuéntame qué necesitas y te propongo el enfoque, el alcance y los plazos.
+            Desarrollador full-stack disponible para incorporación inmediata, en
+            remoto, híbrido o asíncrono. Lo que habéis visto lo llevo de la
+            arquitectura al mantenimiento en producción. Contadme el equipo y el
+            producto, y os respondo con claridad.
           </p>
-          <a
-            href={`mailto:${profile.email}`}
-            className="mt-10 inline-block rounded-xs bg-accent px-8 py-4 text-[18px] font-medium text-background transition-opacity hover:opacity-90"
-          >
-            {profile.email}
-          </a>
+          <div className="mt-10 flex flex-col items-center gap-5">
+            <Link
+              href="/contact"
+              className="inline-block rounded-xs bg-accent px-8 py-4 text-[18px] font-medium text-background transition-opacity hover:opacity-90"
+            >
+              Hablemos
+            </Link>
+            <a
+              href={`mailto:${profile.email}`}
+              className="group font-soft text-[15px] text-accent/70 transition-colors hover:text-accent"
+            >
+              o escríbeme a{" "}
+              <span className="text-accent group-hover:text-accent-2">
+                {profile.email}
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </>
