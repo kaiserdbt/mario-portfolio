@@ -8,8 +8,9 @@ export default function TechStack() {
       eyebrow="Stack"
       title="Las herramientas que uso"
       description="Las tecnologías con las que construyo y mantengo software día a día."
+      innerClassName="mx-auto max-w-[1040px]"
     >
-      <div className="mx-auto flex max-w-[1040px] flex-col gap-4">
+      <div className="flex flex-col gap-4">
         {stack.map((category) => (
           <div
             key={category.title}
