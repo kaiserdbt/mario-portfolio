@@ -4,12 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import BrandLink from "@/components/BrandLink";
+import { profile } from "@/data/profile";
 
 const navItems = [
-  { label: "Servicios", href: "/services" },
+  { label: "Capacidades", href: "/services" },
   { label: "Proyectos", href: "/#work" },
   { label: "Sobre mí", href: "/about" },
-  { label: "Contacto", href: "/#contact" },
+  { label: "Contacto", href: "/contact" },
 ];
 
 const linkClass =
@@ -17,6 +18,11 @@ const linkClass =
 
 const ctaClass =
   "inline-flex items-center justify-center rounded-xs bg-accent px-4 py-2.5 font-heading text-[13px] uppercase tracking-[0.115em] text-background transition-colors duration-300 hover:bg-accent-2";
+
+const cvClass =
+  "inline-flex items-center justify-center rounded-xs border border-accent/25 px-4 py-2.5 font-heading text-[13px] uppercase tracking-[0.115em] text-accent transition-colors duration-300 hover:border-accent/60";
+
+const cvHref = profile.cvUrl;
 
 const brandClass =
   "font-heading text-[26px] font-normal leading-none tracking-[0.02em] text-accent transition-opacity hover:opacity-80";
@@ -64,9 +70,20 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <Link href="/#contact" className={ctaClass}>
-              Hablemos
-            </Link>
+            <div className="flex items-center gap-3">
+              <a
+                href={cvHref}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cvClass}
+              >
+                CV
+              </a>
+              <Link href="/contact" className={ctaClass}>
+                Hablemos
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -78,7 +95,7 @@ export default function Header() {
             <BrandLink className={brandClass} />
 
             <div className="flex items-center gap-3">
-              <Link href="/#contact" className={ctaClass} onClick={() => setOpen(false)}>
+              <Link href="/contact" className={ctaClass} onClick={() => setOpen(false)}>
                 Hablemos
               </Link>
 
@@ -129,8 +146,19 @@ export default function Header() {
                     <Underline />
                   </Link>
                 ))}
+                <a
+                  href={cvHref}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${cvClass} w-full`}
+                  onClick={() => setOpen(false)}
+                  tabIndex={open ? 0 : -1}
+                >
+                  Descargar CV
+                </a>
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className={`${ctaClass} w-full`}
                   onClick={() => setOpen(false)}
                   tabIndex={open ? 0 : -1}

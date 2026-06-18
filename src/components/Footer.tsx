@@ -2,10 +2,10 @@ import Link from "next/link";
 import { profile } from "@/data/profile";
 
 const navLinks = [
-  { label: "Servicios", href: "/services" },
+  { label: "Capacidades", href: "/services" },
   { label: "Proyectos", href: "/#work" },
-  { label: "Sobre mí", href: "/#about" },
-  { label: "Contacto", href: "/#contact" },
+  { label: "Sobre mí", href: "/about" },
+  { label: "Contacto", href: "/contact" },
 ];
 
 const socials = [
@@ -55,6 +55,15 @@ export default function Footer() {
           <p className="font-soft text-[18px] text-muted">
             Ingeniero de software full-stack
           </p>
+          {profile.available && (
+            <span className="mt-1 inline-flex items-center gap-2.5 rounded-full border border-accent/20 bg-accent/5 px-4 py-2 font-heading text-[12px] uppercase tracking-[0.18em] text-accent">
+              <span
+                aria-hidden
+                className="h-1.5 w-1.5 rounded-full bg-accent-2 animate-pulse-dot"
+              />
+              Disponible para nuevos proyectos
+            </span>
+          )}
         </div>
 
         <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
@@ -67,6 +76,15 @@ export default function Footer() {
               {link.label}
             </Link>
           ))}
+          <a
+            href={profile.cvUrl}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-heading text-[14px] uppercase tracking-[0.14em] text-accent/80 transition-colors hover:text-accent"
+          >
+            CV
+          </a>
         </nav>
 
         <div className="flex items-center justify-center gap-3">
@@ -100,9 +118,15 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <p className="mx-auto w-full max-w-[1400px] px-6 py-6 text-center font-soft text-[13px] text-muted sm:px-8">
-          © {year} {profile.name}
-        </p>
+        <div className="mx-auto flex w-full max-w-[1400px] flex-col items-center justify-between gap-3 px-6 py-6 text-center font-soft text-[13px] text-muted sm:flex-row sm:px-8">
+          <p>© {year} {profile.name}</p>
+          <Link
+            href="/privacidad"
+            className="transition-colors hover:text-accent"
+          >
+            Política de privacidad
+          </Link>
+        </div>
       </div>
     </footer>
   );
