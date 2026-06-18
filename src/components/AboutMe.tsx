@@ -39,9 +39,9 @@ const social = [
 // disuelve la foto en el fondo por abajo y por los lados (interseccion de gradientes)
 const portraitMask = {
   maskImage:
-    "linear-gradient(to bottom, #000 80%, transparent 100%), linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%)",
+    "linear-gradient(to bottom, transparent 0%, #000 3%, #000 80%, transparent 100%), linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%)",
   WebkitMaskImage:
-    "linear-gradient(to bottom, #000 80%, transparent 100%), linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%)",
+    "linear-gradient(to bottom, transparent 0%, #000 3%, #000 80%, transparent 100%), linear-gradient(to right, transparent 0%, #000 9%, #000 91%, transparent 100%)",
   maskComposite: "intersect",
   WebkitMaskComposite: "source-in",
 } as const;
@@ -80,10 +80,10 @@ export default function AboutMe() {
           style={portraitMask}
         >
           <Image
-            src="/about-portrait.png"
+            src="/about-70.png"
             alt={profile.name}
-            width={1122}
-            height={1402}
+            width={1058}
+            height={1486}
             unoptimized
             className="h-auto w-full object-contain"
           />
