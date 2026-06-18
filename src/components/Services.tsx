@@ -3,20 +3,20 @@ import Reveal from "@/components/Reveal";
 
 const services = [
   {
-    title: "Desarrollo full‑stack",
-    body: "Diseño y construyo el producto entero, del modelo de datos al despliegue. Multi-tenant con aislamiento por fila en PostgreSQL, cobros con Stripe y tiempo real, con la arquitectura, los tests y el CI/CD que exige sostenerlo en producción.",
+    title: "Ingeniería de producto y operación",
+    body: "Me ocupo del producto entero: base de datos, backend en NestJS, frontend, pagos, permisos por rol y CI/CD. Una vez vivo, respondo de él en producción y lo dejo listo para crecer. MARAI lo demuestra en un SaaS B2B de gestión de citas, multi-tenant, con aislamiento por fila (RLS) en PostgreSQL, cobros con Stripe y operación real en 33 idiomas.",
     linkLabel: "Marai Agenda",
     href: "/projects/marai-agenda",
   },
   {
-    title: "Producto con IA",
-    body: "Integro IA donde aporta de verdad y siempre con red de seguridad. El modelo clasifica, nunca redacta texto libre; valido cada salida contra esquemas estrictos y el sistema falla en cerrado para que ni el coste ni la calidad se descontrolen.",
+    title: "Sistemas de crecimiento orgánico",
+    body: "Diseño plataformas de contenido donde la arquitectura técnica y la calidad editorial crecen al mismo ritmo, sin que una frene a la otra. OLUNAE lo lleva a escala con hubs temáticos, páginas long-tail, control de indexabilidad y reglas de calidad que mantienen la consistencia cuando el catálogo se multiplica.",
     linkLabel: "Olunae",
     href: "/projects/olunae",
   },
   {
-    title: "SEO y GEO",
-    body: "Construyo plataformas de contenido a escala que cortan el relleno, con plantillas en base de datos y decenas de validadores de calidad por página. Y no me quedo en el SEO clásico: trabajo también AEO, GEO, AIO y SXO, para ganar visibilidad en buscadores, en respuestas y en los motores de IA.",
+    title: "Arquitectura editorial y monetización",
+    body: "Creo plataformas pensadas a la vez para la visibilidad y el negocio: reviews, comparativas y rankings sobre tracking, afiliación y 41 validadores de calidad. No me limito al posicionamiento clásico: cubro SEO, GEO, AIO y SXO para competir en buscadores, en motores generativos y en la experiencia de búsqueda. QONIAR une arquitectura editorial, medición y monetización controlada.",
     linkLabel: "Qoniar",
     href: "/projects/qoniar",
   },
@@ -33,7 +33,7 @@ export default function Services() {
                 0{i + 1}
               </span>
 
-              <h3 className="mt-4 font-display text-2xl font-light uppercase leading-tight tracking-[0.04em] text-accent">
+              <h3 className="mt-4 text-balance font-display text-2xl font-light uppercase leading-tight tracking-[0.04em] text-accent min-[1280px]:max-[1440px]:min-h-[5.625rem] min-[1440px]:min-h-[3.75rem]">
                 {s.title}
               </h3>
               <p className="mt-4 font-soft text-[18px] leading-relaxed text-accent">
