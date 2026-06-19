@@ -56,7 +56,7 @@ const milestones = [
     tags: ["Editorial tech", "SEO/GEO", "Tracking", "41 validadores"],
     href: "https://qoniar.com/",
     slug: "qoniar",
-    metricLabels: ["Casos de test", "Páginas modeladas"],
+    metricLabels: ["Casos de test", "Validadores de contenido"],
     year: "2026",
   },
   {
@@ -67,7 +67,7 @@ const milestones = [
     tags: ["SEO programático", "Clasificación", "Indexabilidad"],
     href: "https://olunae.com/",
     slug: "olunae",
-    metricLabels: ["Tests", "Capas de defensa IA"],
+    metricLabels: ["Suites de test", "Capas de defensa IA"],
     year: "2026",
   },
   {
@@ -78,7 +78,7 @@ const milestones = [
     tags: ["SaaS B2B", "Multi-tenant", "Pagos", "Aislamiento de datos"],
     href: "https://maraiagenda.com/es",
     slug: "marai-agenda",
-    metricLabels: ["Idiomas", "Modelo de datos"],
+    metricLabels: ["Tablas del modelo", "Cobertura RLS"],
     year: "2025",
   },
   {
