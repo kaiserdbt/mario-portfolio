@@ -8,7 +8,7 @@ import { profile } from "@/data/profile";
 
 const navItems = [
   { label: "Capacidades", href: "/services" },
-  { label: "Proyectos", href: "/#work" },
+  { label: "Proyectos", href: "/projects" },
   { label: "Sobre mí", href: "/about" },
   { label: "Contacto", href: "/contact" },
 ];
