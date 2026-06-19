@@ -95,11 +95,11 @@ export default function AiWorkflow() {
                   onRight ? "xl:col-start-2" : "xl:col-start-1 xl:row-start-1"
                 }`}
               >
-                <div className="flex flex-wrap items-start gap-x-4 gap-y-3">
-                  <span className="order-1 shrink-0 rounded-xs border border-accent/25 bg-accent/10 px-2.5 py-1.5 font-heading text-[11px] uppercase tracking-widest text-accent/70 xl:order-2 xl:mt-0.5 xl:text-[12px]">
+                <div className="flex flex-wrap items-start gap-x-4 gap-y-3 xl:flex-col xl:flex-nowrap">
+                  <span className="order-1 shrink-0 rounded-xs border border-accent/25 bg-accent/10 px-2.5 py-1.5 font-heading text-[11px] uppercase tracking-widest text-accent/70 xl:text-[12px]">
                     {step.phase}
                   </span>
-                  <h3 className="order-2 w-full font-display text-[20px] font-light leading-[1.3] tracking-[0.5px] text-accent xl:order-1 xl:w-auto xl:flex-1 xl:text-[24px]">
+                  <h3 className="order-2 w-full font-display text-[20px] font-light leading-[1.3] tracking-[0.5px] text-accent xl:text-[24px] xl:uppercase">
                     {step.title}
                   </h3>
                 </div>
