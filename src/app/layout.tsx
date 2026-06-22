@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollTop from "@/components/ScrollTop";
-import { defaultMetadata } from "@/lib/seo";
+import { defaultMetadata, profileJsonLd } from "@/lib/seo";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -50,6 +50,10 @@ export default function RootLayout({
       className={`${display.variable} ${satoshi.variable} ${chillax.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd) }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
