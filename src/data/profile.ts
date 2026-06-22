@@ -16,7 +16,7 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Mario Cava Avila",
-  role: "Ingeniero de software full-stack",
+  role: "Desarrollador de software full-stack",
   headline:
     "Construyo el producto entero, del modelo de datos al despliegue, con la seguridad y las pruebas que exige sostenerlo en producción.",
   summary:
@@ -25,7 +25,7 @@ export const profile: Profile = {
   email: "mariocavaavila@gmail.com",
   githubUrl: "https://github.com/kaiserdbt",
   linkedinUrl: "https://www.linkedin.com/in/mariocavaavila/",
-  portfolioUrl: "https://mario-portfolio.vercel.app",
+  portfolioUrl: "https://mario-portfolio-bice.vercel.app",
   cvUrl: "/cv-mario-cava-avila.pdf",
   available: true,
 };

@@ -6,7 +6,7 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? profile.portfolioUrl;
 
 export const siteDescription =
-  "Portfolio de Mario Cava Avila, ingeniero de software full-stack. Construyo SaaS B2B multi-tenant, plataformas de SEO programático e integraciones de IA, con seguridad, pruebas y CI/CD, de la base de datos al despliegue.";
+  "Portfolio de Mario Cava Avila, desarrollador de software full-stack. Construyo SaaS B2B multi-tenant, plataformas de SEO programático e integraciones de IA, con seguridad, pruebas y CI/CD, de la base de datos al despliegue.";
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -19,7 +19,7 @@ export const defaultMetadata: Metadata = {
   keywords: [
     "Mario Cava Avila",
     "desarrollador full-stack",
-    "ingeniero de software",
+    "desarrollador de software",
     "Next.js",
     "React",
     "TypeScript",

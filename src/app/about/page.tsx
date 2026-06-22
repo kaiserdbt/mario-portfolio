@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Sobre mí",
   description:
-    "Mario Cava Avila, ingeniero de software full-stack. Construyo SaaS, plataformas de SEO con IA y automatización, de la base de datos al despliegue.",
+    "Mario Cava Avila, desarrollador de software full-stack. Construyo SaaS, plataformas de SEO con IA y automatización, de la base de datos al despliegue.",
   path: "/about",
 });
 
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <span className="block italic">Cava Avila</span>
               </h1>
               <p className="mx-auto mt-6 max-w-md font-soft text-[18px] leading-[1.5] text-accent/60 min-[810px]:text-[22px] min-[810px]:leading-[33px] min-[1480px]:mx-0">
-                Ingeniero de software full-stack.
+                Desarrollador de software full-stack.
               </p>
               <p className="mx-auto mt-3 max-w-md font-soft text-[15px] leading-[1.5] text-accent/45 min-[810px]:text-[16px] min-[1480px]:mx-0">
                 Desde 2023, del frontend a sistemas en producción.

@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/Three.js-r3f-000000?style=flat-square&logo=threedotjs&logoColor=white" />
 </p>
 
-**Live:** https://mario-portfolio.vercel.app
+**Live:** https://mario-portfolio-bice.vercel.app
 
 ---
 
