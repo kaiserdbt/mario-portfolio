@@ -18,6 +18,7 @@ export const defaultMetadata: Metadata = {
   description: siteDescription,
   keywords: [
     "Mario Cava Avila",
+    "Full-Stack Developer",
     "desarrollador full-stack",
     "desarrollador de software",
     "Next.js",

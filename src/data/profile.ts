@@ -16,7 +16,7 @@ export type Profile = {
 
 export const profile: Profile = {
   name: "Mario Cava Avila",
-  role: "Desarrollador de software full-stack",
+  role: "Full-Stack Developer",
   headline:
     "Construyo el producto entero, del modelo de datos al despliegue, con la seguridad y las pruebas que exige sostenerlo en producción.",
   summary:

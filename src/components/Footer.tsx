@@ -53,7 +53,7 @@ export default function Footer() {
             mariocava<span className="text-accent-2">.</span>
           </Link>
           <p className="font-soft text-[18px] text-muted">
-            Desarrollador de software full-stack
+            Full-Stack Developer
           </p>
           {profile.available && (
             <span className="mt-1 inline-flex items-center gap-2.5 rounded-full border border-accent/20 bg-accent/5 px-4 py-2 font-heading text-[12px] uppercase tracking-[0.18em] text-accent">
