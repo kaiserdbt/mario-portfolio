@@ -25,7 +25,7 @@ export const profile: Profile = {
   email: "mariocavaavila@gmail.com",
   githubUrl: "https://github.com/kaiserdbt",
   linkedinUrl: "https://www.linkedin.com/in/mariocavaavila/",
-  portfolioUrl: "https://mario-portfolio-bice.vercel.app",
+  portfolioUrl: "https://mariocavaavila.vercel.app",
   cvUrl: "/cv-mario-cava-avila.pdf",
   available: true,
 };
