@@ -12,9 +12,8 @@ export default function Hero() {
       <HeroPortrait alt={profile.name} />
 
       {/* el titular sube a la zona inferior ya transparente del retrato (sin tapar la cara) */}
-      <h1 className="relative z-10 mx-auto -mt-4 font-display text-[clamp(2.5rem,6.5vw,5rem)] font-light leading-[1.05] tracking-tight text-balance text-accent sm:-mt-12">
-        Full-Stack
-        <span className="mt-1 block italic">Developer</span>
+      <h1 className="relative z-10 mx-auto -mt-4 whitespace-nowrap font-display text-[clamp(1.5rem,7.5vw,5rem)] font-light leading-[1.05] tracking-tight text-accent sm:-mt-12">
+        Full-Stack <span className="italic">Developer</span>
       </h1>
 
       <p className="mx-auto mt-5 max-w-2xl font-soft text-xl leading-relaxed text-muted sm:text-[22px]">
