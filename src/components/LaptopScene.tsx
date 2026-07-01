@@ -123,7 +123,7 @@ export default function LaptopScene({
         color="#ffb27a"
       />
       <Suspense fallback={null}>
-        <Bounds fit clip observe margin={1.0}>
+        <Bounds fit clip observe margin={1.25}>
           <Center>
             <Mac progress={progress} />
           </Center>
